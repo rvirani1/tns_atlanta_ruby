@@ -1,7 +1,7 @@
 students = ["Bob", "Christie", "Albert", "John", "Rebecca"]
 teachers = ["Riaz", "James"]
 
-puts "What's your name?"
+`say "What's your name?"`
 name = gets.chomp()
 if students.include?(name)
   `say 'Keep studying, #{name}'`
