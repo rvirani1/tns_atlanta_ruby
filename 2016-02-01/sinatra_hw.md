@@ -10,7 +10,16 @@ The second endpoint should be a POST call at path "/clear". This should essentia
 
 Note you'll have to use sessions to store the counter. 
 
-No, you don't have to type up all the lyrics. Install the "activesupport", "shotgun", and "sinatra" gems and start with the code below:
+No, you don't have to type up all the lyrics. I will give them to you. 
+
+First, install the required gems:
+```bash
+gem install activesupport
+gem install shotgun
+gem install sinatra
+```
+
+Second, start with the code below as your `app.rb`
 
 ```ruby
 require 'sinatra'
