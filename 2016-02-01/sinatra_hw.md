@@ -2,9 +2,7 @@
 
 Build a Sinatra app that has two endpoints.
 
-The first endpoint should be a GET call at path "/lyrics". Every time they visit the site, they should see different lyrics
-from the song [12 Days of School](http://www.dennydavis.net/poemfiles/xmas2.htm). The lyric for the song should 
-match the number of times they've visited. For example, their first visit should show:
+The first endpoint should be a GET call at path "/lyrics". Every time the user visits the site, he or she should see different lyrics from the song [12 Days of School](http://www.dennydavis.net/poemfiles/xmas2.htm). The lyric for the song should match the number of times they've visited. For example, their first visit should show:
 
   "On the 1st day of high school, my teacher gave to me: A 'C' in American History"
   
