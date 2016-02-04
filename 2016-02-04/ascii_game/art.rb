@@ -153,6 +153,6 @@ ASCII_ART = {
   "
 }
 
-def random_ascii
+def random_ascii_name
   ASCII_ART.to_a.sample[0]
 end
