@@ -3,7 +3,9 @@ require_relative("insulter")
 
 enable :sessions
 
-# Store our insults in an array
+# 1. Show a new insult every time
+# 2. Store old insults
+# 3. Allow user to clear
 
 # GET request at "/" that shows insults, old + new insult
 get("/") do
@@ -14,13 +16,11 @@ get("/") do
   else
     session["previous_insults"].push(random_insult)
   end
-  session["previous_insults"]
   erb :index
 end
 
 # POST request at "/clear" that clears the insults, then redirects to the home page
 post("/clear") do
- # localhost:4567/clear
   session["previous_insults"] = []
   redirect back
 end

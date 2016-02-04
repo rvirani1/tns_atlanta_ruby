@@ -25,13 +25,27 @@ def lyrics(day)
   result + extracted_lyrics.to_sentence
 end
 
-get '/' do
-  session["counter"] ||= 0
-  session["counter"] >= 12 ? session["counter"] = 1 : session["counter"] += 1
-  lyrics(session["counter"])
+# 1. GET endpoint that shows lyrics for first day
+# 2. Update the endpoint to show different lyrics per visit
+# 3. Update the endpoint to start back at one when we hit 12
+# 4. Build a clear endpoint to reset the counter
+
+get("/") do
+  # show lyrics for the first day
+  # session["day"] ||= 0
+  if session["day"] == nil
+    session["day"] = 0
+  end
+
+  if session["day"] >= 12
+    session["day"] = 0
+  end
+
+  session["day"] += 1
+  erb :index
 end
 
-post "/clear" do
-  session["counter"] = 0
+post("/clear") do
+  session["day"] = 0
   redirect back
 end

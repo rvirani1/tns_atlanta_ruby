@@ -1,0 +1,9 @@
+<%= params["name"] %>
+
+<% if @type == "student" %>
+  <p>Hey You're a Student</p>
+<% elsif @type == "teacher" %>
+  <p>Hey You're a Teacher</p>
+<% else %>
+  <p>Don't Know you</p>
+<% end %>

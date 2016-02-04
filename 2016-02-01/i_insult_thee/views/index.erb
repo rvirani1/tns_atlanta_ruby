@@ -1,2 +1,5 @@
-<h1>Hello I'm here and ready to insult</h1>
-<p>A paragraph</p>
+<h1>I Insult Thee</h1>
+<%= session["previous_insults"].join("<br>") %>
+<form action="/clear" method="post">
+  <button>Clear</button>
+</form>
