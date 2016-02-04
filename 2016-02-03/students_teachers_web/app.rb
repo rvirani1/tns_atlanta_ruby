@@ -7,9 +7,15 @@ get("/") do
 end
 
 post("/submission") do
-  params["name"] # value is "Bob"
-  #  Pull logic from your last game
-  # @type which needs to be equal to "student", "teacher", or "unknown"
+  students = ["Bob", "Christie", "Albert", "John", "Rebecca"]
+  teachers = ["Riaz", "James"]
+  if students.include?(params["name"])
+    @type = "student"
+  elsif teachers.include?(params["name"])
+    @type = "teacher"
+  else
+    @type = "unknown"
+  end
   erb :submission
 end
 
